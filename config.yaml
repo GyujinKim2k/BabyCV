@@ -1,0 +1,23 @@
+cameras:
+  bedroom:
+    source: "videos/bedroom.mp4"
+    type: "sleep"
+    motion_threshold: 5
+    frame_interval_seconds: 2
+    roi: [100, 50, 400, 300]       # 침대 영역 [x, y, width, height] 픽셀 좌표
+    presence_threshold: 3          # ROI에서 아기 부재 N분 이상 시 기상 판정
+  livingroom:
+    source: "videos/livingroom.mp4"
+    type: "activity"
+    motion_threshold: 15
+    frame_interval_seconds: 2
+    api_interval_seconds: 30
+
+gemini:
+  model: "gemini-2.0-flash"
+  api_key_env: "GEMINI_API_KEY"
+
+logging:
+  database_path: "data/events.db"
+  snapshot_dir: "data/snapshots"
+  csv_path: "data/events.csv"
