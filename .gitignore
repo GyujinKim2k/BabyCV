@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+data/events.db
+data/events.csv
+data/snapshots/*.jpg
